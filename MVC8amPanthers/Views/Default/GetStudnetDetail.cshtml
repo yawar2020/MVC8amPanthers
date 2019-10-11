@@ -1,0 +1,28 @@
+﻿@model List<MVC8amPanthers.Models.Student>
+@{
+    ViewBag.Title = "GetStudnetDetail";
+}
+
+<h2>GetStudnetDetail</h2>
+
+<table>
+    <tr>
+        <th>StudId</th>
+        <th>Name</th>
+        <th>Fees</th>
+        <th>Section</th>
+        <th>action</th>
+    </tr>
+    @foreach (var item in Model) {
+    <tr>
+        <td>@item.StudId</td>
+        <td>@item.StudName</td>
+        <td>@item.StudFees</td>
+        <td>@item.Section</td>
+        <td>
+            @Html.ActionLink("Edit","Edit",new { id=@item.StudId})|
+            @Html.ActionLink("Delete","Delete", new { id = @item.StudId })
+        </td>
+    </tr>
+    }
+</table>
