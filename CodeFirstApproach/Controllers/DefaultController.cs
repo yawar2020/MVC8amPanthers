@@ -84,5 +84,11 @@ namespace CodeFirstApproach.Controllers
                 return View(obj);
             }
         }
+
+        public ActionResult HtmlHelperExample()
+        {
+
+            return View();
+        }
     }
 }

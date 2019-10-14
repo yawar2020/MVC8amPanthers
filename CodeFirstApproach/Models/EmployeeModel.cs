@@ -10,6 +10,7 @@ namespace CodeFirstApproach.Models
     {
         [Key]
         public int EmpId { get; set; }
+        [Display(Name ="Employee Name")]
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
         public int DeptId { get; set; }

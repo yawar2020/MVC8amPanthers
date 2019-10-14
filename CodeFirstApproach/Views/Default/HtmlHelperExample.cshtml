@@ -1,0 +1,13 @@
+﻿@model   CodeFirstApproach.Models.EmployeeModel
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+<form method="post">
+    @Html.TextBox("usernameaw")<br />
+    <input type="text" id="Lastname" name="LastName" value="" /><br />
+    @Html.TextBoxFor(Model => Model.EmpName)<br />
+    @Html.LabelFor(Model => Model.EmpName)
+    <input type="submit" value="Submit" />
+</form>
