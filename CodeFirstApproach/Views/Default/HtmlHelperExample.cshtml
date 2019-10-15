@@ -3,11 +3,24 @@
     ViewBag.Title = "HtmlHelperExample";
 }
 
+<script>
+    function fun() {
+        alert('fun have Been Called');
+    }
+</script>
+
 <h2>HtmlHelperExample</h2>
 <form method="post">
-    @Html.TextBox("usernameaw")<br />
-    <input type="text" id="Lastname" name="LastName" value="" /><br />
-    @Html.TextBoxFor(Model => Model.EmpName)<br />
-    @Html.LabelFor(Model => Model.EmpName)
-    <input type="submit" value="Submit" />
+    @Html.TextBox("username",null,new { @style = "background-color:red;color:white",@readonly="readonly",@class="form-control",@onclick="fun()" })<br />
+    @Html.Password("Pwd")<br />
+    <span>Male</span>  @Html.RadioButton("Gender", "Male",true)
+    <span>FeMale</span>@Html.RadioButton("Gender", "FeMale")
+<br />
+    @Html.DropDownList("Country",new List<SelectListItem>(){
+        new SelectListItem { Text = "India", Value = "1",Selected=true },
+        new SelectListItem { Text = "Australia", Value = "2" },
+        new SelectListItem {Text="Bangladesh",Value="3" },
+    },"Selct Country"
+    )
+
 </form>
