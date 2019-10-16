@@ -87,7 +87,7 @@ namespace CodeFirstApproach.Controllers
 
         public ActionResult HtmlHelperExample()
         {
-
+            ViewBag.Employname = new SelectList(db.EmployeeModels, "EmpId", "EmpName",3);
             return View();
         }
     }

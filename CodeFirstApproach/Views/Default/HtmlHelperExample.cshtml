@@ -1,4 +1,5 @@
 ﻿@model   CodeFirstApproach.Models.EmployeeModel
+    @using CodeFirstApproach.CustomHelpers
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
@@ -22,5 +23,10 @@
         new SelectListItem {Text="Bangladesh",Value="3" },
     },"Selct Country"
     )
+    <br />
+    @Html.DropDownList("Employname","Select EmployeeName")
+
+    @myhtmlhelper.MyLabel("EmpDetails")
+
 
 </form>
