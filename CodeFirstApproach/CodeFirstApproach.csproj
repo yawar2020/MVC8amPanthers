@@ -128,6 +128,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Documents\tempdata.txt" />
+    <Content Include="Documents\viewBAg.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
@@ -175,6 +177,8 @@
     <Content Include="Views\Default\Edit.cshtml" />
     <Content Include="Views\Default\Delete.cshtml" />
     <Content Include="Views\Default\HtmlHelperExample.cshtml" />
+    <Content Include="Views\Default\TestViewData.cshtml" />
+    <Content Include="Views\Default\GetData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

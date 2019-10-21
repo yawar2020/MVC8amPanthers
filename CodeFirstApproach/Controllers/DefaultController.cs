@@ -90,5 +90,30 @@ namespace CodeFirstApproach.Controllers
             ViewBag.Employname = new SelectList(db.EmployeeModels, "EmpId", "EmpName",3);
             return View();
         }
+
+        public ActionResult TestViewData()
+        {
+            //List<string> obj = new List<string>();
+            //obj.Add("pratiusha");
+            //obj.Add("deepti");
+            //obj.Add("Nagini");
+            //obj.Add("Anusha");
+            //ViewData["Student"] = obj;
+            ViewBag.somevalue = "Hello world";
+            return RedirectToAction("GetViewDataValue");
+        }
+        public ActionResult GetViewDataValue()
+        {
+            TempData["EmployeeInfo"] = "Hello World";
+            return RedirectToAction("GetData");
+        }
+        public ActionResult GetData()
+        {
+            //string Tempinfo = TempData["EmployeeInfo"].ToString();
+            // TempData.Keep();
+            string Tempinfo = TempData.Peek("EmployeeInfo").ToString();
+            ViewBag.info = Tempinfo;
+            return View();
+        }
     }
 }

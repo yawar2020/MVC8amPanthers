@@ -26,7 +26,15 @@
     <br />
     @Html.DropDownList("Employname","Select EmployeeName")
 
-    @myhtmlhelper.MyLabel("EmpDetails")
+    @myhtmlhelper.MyLabel("EmpDetails")<br />
+
+    @Html.createUrControl("file")<br />
+
+    @helper labelbyrazzorcode(string content)
+    {
+    <label>@content</label>
+    }
+    @labelbyrazzorcode("hi this is ali")
 
 
 </form>
