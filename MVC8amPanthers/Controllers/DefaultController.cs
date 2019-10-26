@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using MVC8amPanthers.HFilter;
 namespace MVC8amPanthers.Controllers
 {
+    
     public class DefaultController : Controller
     {
         // GET: Default
@@ -64,6 +65,13 @@ namespace MVC8amPanthers.Controllers
                 return RedirectToAction("GetStudnetDetail");
             else
                 return View();
+        }
+
+    [MyFilter]  
+        public ActionResult TestFilter()
+        {
+            ViewBag.PlayerName = "Yuvraj singh";
+            return View();
         }
     }
 }

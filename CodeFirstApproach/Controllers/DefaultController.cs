@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CodeFirstApproach.Models;
+
 namespace CodeFirstApproach.Controllers
 {
     public class DefaultController : Controller
@@ -115,5 +116,9 @@ namespace CodeFirstApproach.Controllers
             ViewBag.info = Tempinfo;
             return View();
         }
+
+        
     }
+
+
 }

@@ -139,6 +139,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Documents\MvcNew Material.docx" />
     <Content Include="Documents\Html helpers.docx" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\ContactUsPage\Views\web.config" />
+    <Content Include="Documents\Filter mvc.zip" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -154,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\ContactUsPage\ContactUsPageAreaRegistration.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="CustomHelpers\myhtmlhelper.cs" />
     <Compile Include="Global.asax.cs">
@@ -188,6 +197,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\ContactUsPage\Controllers\" />
+    <Folder Include="Areas\ContactUsPage\Models\" />
+    <Folder Include="Areas\ContactUsPage\Views\Shared\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
