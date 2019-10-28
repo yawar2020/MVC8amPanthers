@@ -73,6 +73,12 @@ namespace MVC8amPanthers.Controllers
             ViewBag.PlayerName = "Yuvraj singh";
             return View();
         }
+        [OutputCache(Duration =15,Location =System.Web.UI.OutputCacheLocation.Client)]
+        public ActionResult GetDateTime()
+        {
+
+            return View();
+        }
     }
 }
 

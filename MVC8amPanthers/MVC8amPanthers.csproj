@@ -167,6 +167,7 @@
     <Content Include="Views\Default\Edit.cshtml" />
     <Content Include="Views\Default\Delete.cshtml" />
     <Content Include="Views\Default\TestFilter.cshtml" />
+    <Content Include="Views\Default\GetDateTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
