@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "TestViewData";
+}
+
+<h2>TestViewData</h2>
+
+<ul>
+    @foreach (string item in ViewData["Student"] as List<string>)
+    {
+
+        <li>@item</li>
+    }
+</ul> 

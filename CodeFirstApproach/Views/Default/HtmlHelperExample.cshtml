@@ -1,0 +1,40 @@
+﻿@model   CodeFirstApproach.Models.EmployeeModel
+    @using CodeFirstApproach.CustomHelpers
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<script>
+    function fun() {
+        alert('fun have Been Called');
+    }
+</script>
+
+<h2>HtmlHelperExample</h2>
+<form method="post">
+    @Html.TextBox("username",null,new { @style = "background-color:red;color:white",@readonly="readonly",@class="form-control",@onclick="fun()" })<br />
+    @Html.Password("Pwd")<br />
+    <span>Male</span>  @Html.RadioButton("Gender", "Male",true)
+    <span>FeMale</span>@Html.RadioButton("Gender", "FeMale")
+<br />
+    @Html.DropDownList("Country",new List<SelectListItem>(){
+        new SelectListItem { Text = "India", Value = "1",Selected=true },
+        new SelectListItem { Text = "Australia", Value = "2" },
+        new SelectListItem {Text="Bangladesh",Value="3" },
+    },"Selct Country"
+    )
+    <br />
+    @Html.DropDownList("Employname","Select EmployeeName")
+
+    @myhtmlhelper.MyLabel("EmpDetails")<br />
+
+    @Html.createUrControl("file")<br />
+
+    @helper labelbyrazzorcode(string content)
+    {
+    <label>@content</label>
+    }
+    @labelbyrazzorcode("hi this is ali")
+
+
+</form>

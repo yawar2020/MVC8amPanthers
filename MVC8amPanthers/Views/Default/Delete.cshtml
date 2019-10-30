@@ -1,0 +1,19 @@
+﻿@model MVC8amPanthers.Models.Student
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div class="container">
+    Student Id:@Model.StudId<br />
+    Student Name:@Model.StudName<br />
+    Student Fees:@Model.StudFees<br />
+    Student Section:@Model.Section<br />
+
+    <form action="/Default/Delete/@Model.StudId" method="post">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+    </form>
+   
+
+</div>
